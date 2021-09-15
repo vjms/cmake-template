@@ -15,4 +15,5 @@ endif()
 # Executable
 add_executable(${PROJECT_NAME})
 add_subdirectory(src)
+add_subdirectory(test)
 
