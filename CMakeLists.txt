@@ -5,12 +5,14 @@ project(proj)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Set compile options
 if (MSVC)
     add_compile_options(/W4 /WX)
 else()
     add_compile_options(-Wall -Wextra -pedantic -Werror)
 endif()
 
+# Executable
+add_executable(${PROJECT_NAME})
 add_subdirectory(src)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
